@@ -83,3 +83,92 @@
         - A falha de uma thread pode afetar todo o processo
         - Custo baixo de criação
         - Realizar operações concomitantes
+
+## Aula 2
+- Sistemas Distribuidos x Sistemas Paralelos
+- SD:
+    - GRID
+    - Fracamente Acoplados
+    - Heterogêneo
+    - Latência
+    - Programação (Multitarefa) Concomitante / Concorrente
+        - Compartilha Recursos
+            - CPU
+            - RAM
+            - GPU
+            - Memória Secundária
+- SP:
+    - Cluster
+    - Fortemente Acoplados (Rack)
+    - Homogêneo
+    - GPU e Multicores
+    - Programação (Multitarefa) Paralela = CUDA
+        - 'n' processos executando ao mesmo tempo 't'
+- Ambos:
+    - Modelo TCP/IP
+        - IP
+        - Dominio
+        - Porta
+        - Socket
+        - UDP ou TCP
+
+- Porquê usar Sistemas Distribuídos?
+    - Compartilhar recursos
+        - 'Dividir para conquistar'
+
+- Como Sistemas Distribuídos operam?
+    - Através da Comunicação
+        - Comunicação de Dados
+            - Bytes
+            - Protocolo TCP/IP (Dita as regras da comunicação)
+                - Lexemas (Simbolos)
+                - Sintaxes
+                - Semântica
+                - Serialização (Define como será enviado o dado)
+            - Categorias
+                - Broadcast
+                - Multicast
+                - Unicast
+                - Halfduplex
+                    - Bloqueante (Comunicação unilateral)
+                - Fullduplex
+            - Escrever = Writer = Sender
+            - Ler = Reader = Receiver
+
+- Arquitetura
+    - Cliente-Servidor
+        - Server Side
+            - ClientSocket
+            - Ip, Mask
+            - Reader
+            - Writer
+        - Client Side
+            - ServerSocket
+            - Ip, Mask
+            - Reader
+            - Writer
+
+- Thread
+    - Mini processo dentro de um processo
+    - Somente existe em Sistemas Distribuídos, não existem em Sistemas Paralelos
+    - "Envolvem" rotinas ou tarefas ou instruções e executa-las concorrentemente
+        - Encapsulam
+        - Wrapping
+    - Tipos
+        - Com seção crítica = Memória Compartilhada
+            - Sincronismo 
+                - Sistemas Operacional (sincronized)
+                - Semaphore
+                - Lock
+        - Sem seção crítica = sem Memória Compartilhada
+        - Seção Crítica
+            - Barramento
+            - Impressora
+            - Ram / Memória
+
+- Processo
+    - Classe Thread -> Sem memória crítica
+    - Interface Runnable -> Com memória crítica
+        - Objeto-Thread
+            - Responsavél por envolver/circundar uma rotina
+            - MinhaThread t1 = new MinhaThread(); (Solução A)
