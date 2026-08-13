@@ -172,3 +172,10 @@
         - Objeto-Thread
             - Responsavél por envolver/circundar uma rotina
             - MinhaThread t1 = new MinhaThread(); (Solução A)
+
+## Aula 3
+- Gestor Firewall
+    - Adicionar Nova Regra
+        - Porta: 12345
+        - Protocolo: TCP ou UDP ou Ambas
+        
