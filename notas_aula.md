@@ -195,4 +195,25 @@
     - Venda de rifas
         - Sem Saldo Compartilhado
         - Com Saldo Compartilhado
-        
+
+## Aula 5
+- Pool de Threads
+    - Threads
+        - Fisicas
+        - Logicas/ Virtuais -> Java
+    - Mini Processos
+        - Na programação
+            - Rotinas
+            - Métodos
+                - com rotinas
+    - No contexto de Listas (Processos)
+        - Armazenar: inserir, popular
+        - Exibir: filtrar (com ou sem)
+        - Buscar ou Pesquisar
+            - Usado para
+                - Atualizar
+                - Remover
+- Uso de threads com listas:
+    - 1) Threads Nominadas (lista1, lista2, ..., uso acadêmico)
+    - 2) Lista de threads
+    - 3) Pool de threads
