@@ -217,3 +217,62 @@
     - 1) Threads Nominadas (lista1, lista2, ..., uso acadêmico)
     - 2) Lista de threads
     - 3) Pool de threads
+
+## Aula 6
+- SD
+    - Foco em comunicação entre máquinas
+        - Compartilhamento de recursos do sistema
+            - Memória, CPU, GPU
+    - Modelo TCP/IP
+        - Foco na camada de transporte
+            - Pacote (Composto de Remetente, destinatário e contéudo)
+            - IP, porta lógica, endereço de servidor e do cliente
+            - Enlace, rede, transporte, sessão, apresentação, aplicação, middleware (Facilitador da programação graças as suas APIs)
+                - Comunicação:
+                    - Orientada a mensagem -> socket
+                    - Envio remotamente
+                        - Serialização
+                            - RPC: Python
+                            - RMI: Java
+                            - SOAP: XML
+                    - Tipos:
+                        - Em relação a sincronismo:
+                            - Síncrona
+                                - Bloqueante (Espera a confirmação)
+                                - Buffer
+                            - Assíncrona
+                                - Não bloqueante
+                            - Tratamento:
+                                - Uso de Semáforos ou Monitores
+                        - Em relação a persistência:
+                            - Transiente:
+                                - Envia mensagem somente se o destino estiver ligado ou online
+                            - Persistente:
+                                - Envia mensagem independentemente se o destino está online (ou não) ou ligado (ou não)
+- Sockets
+    - Server
+        - ServerSocket
+            - Sabe Atender
+            - Socket (Representa o Cliente)
+            - Escritor e Leitor de Sockets
+    - Client
+        - Socket
+        - Escritor e Leitor de Sockets
+    - Fluxo Clássico
+        - 1) Servidor
+        - 2) Clientes
+- Desafio (Utilizando o Cófigo do exemplo2_gerarEmail)
+    - Arquitetura MVC
+    - Cliente:
+        - Jform
+            - Nome: []
+            - Botão "Enviar"
+            - E-mail: []
+            - (Ao enviar um nome deve aparecer na caixa e-mail um email com final @ufn.edu.br)
+            - Se já houver o nome/e-mail mostrar num JOptionPane com aviso de "Já Cadastrado"
+    - Server:
+        - JForm
+            - Lista de pessoas
+                - jTextArea (Atualização da Lista de Pessoas)
+                    - Nome - E-mail
+                - Toda vez que a lista receber usuário, precisa ser ordenada pelo nome
