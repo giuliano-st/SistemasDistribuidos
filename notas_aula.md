@@ -261,7 +261,7 @@
     - Fluxo Clássico
         - 1) Servidor
         - 2) Clientes
-- Desafio (Utilizando o Cófigo do exemplo2_gerarEmail)
+- Desafio (Utilizando o Código do exemplo2_gerarEmail)
     - Arquitetura MVC
     - Cliente:
         - Jform
@@ -276,3 +276,63 @@
                 - jTextArea (Atualização da Lista de Pessoas)
                     - Nome - E-mail
                 - Toda vez que a lista receber usuário, precisa ser ordenada pelo nome
+## Aula 7
+- Socket = Baixo Nível
+    - Alocar / Manipular
+    - Arquitetura Cliente-Servidor
+    - Modelo TCP/IP
+        - Endereço de máquina (Server)
+        - Porta Lógica
+        - Protocolos de Transporte
+            - TCP
+            - UDP
+        - Comunicação
+            - Sincrona
+                - Chat (Whatsapp)
+                    - Arquitetura Cliente-Servidor
+                        - TCP/UDP
+                        - Sincrono
+            - Assincrona
+    - Server
+        - ServerSocket (Precisa ter)
+            - Tem que anunciar seu IP
+            - Porta de Resposta / Atendimento
+        - Socket (Client)
+            - pool de Threads
+        - _OutputStream
+            - writer
+        - _InputStream
+            - reader
+        - Como funciona:
+            - Server
+                - (1) ServerSocket
+                    - Endereço de IO
+                    - Porta de Resposta
+                - (2) Socket (Cliente)
+                - (3) OutputStream
+                - (4) InputStream
+            - Client
+            - (1) Socket
+                - Apontamento
+            - (2) Ouput 
+            - (3) Input
+            - Operação: (Comunicação Bloqueante)
+                - Lado Servidor
+                    - IPServer
+                    - PortaServer
+                    ^   |
+                    |   | <----- Trafégo (Comunicação/Operação)
+                    |   |           - Escrita (Write/Output); Leitura (Read/Input)
+                    |   ^
+                - Lado Cliente
+                    - PCClient
+                    - PortaClient
+            - O que passa no Socket?
+                - Bytes
+                - String
+                    - DataOutputStream
+                    - DataInputStream
+                - Objeto
+                    - ObjectOutputStream
+                    - ObjectInputStream
+                    - Serializavél
