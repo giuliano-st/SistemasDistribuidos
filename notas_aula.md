@@ -336,3 +336,22 @@
                     - ObjectOutputStream
                     - ObjectInputStream
                     - Serializavél
+## Aula 8
+ - Protocolo UDP
+ - TCP
+    - Enviar
+        - bytes
+        - String
+        - Objeto
+    - Receber
+        - bytes
+        - String
+        - Objeto
+ - UDP
+    - montar pacote
+        - bytes
+    - enviar
+        - bytes
+    - receber
+        - bytes
+
