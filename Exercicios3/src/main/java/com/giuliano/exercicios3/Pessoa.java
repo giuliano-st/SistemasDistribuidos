@@ -6,7 +6,6 @@ package com.giuliano.exercicios3;
 
 import java.io.Serializable;
 import java.net.InetAddress;
-import java.util.Objects;
 
 public class Pessoa implements Serializable {
 
