@@ -355,3 +355,44 @@
     - receber
         - bytes
 
+## Aula 9
+ - Sistemas Distribuídos
+    - Sistemas heterogêneos
+    - Sistemas distribuidos geograficamente distantes
+    - Sistemas fracamente acoplados
+    - GRID computacional
+
+    - Regidos
+        - Modelo TCP / IP
+            - baseado em 4 camadas
+            - endereço de IP
+            - porta lógica
+            - protocolos de transporte:
+                - TCP: enviar e receber
+                    - confirmação de entrega
+                    - adequado para arquiteturas cliente-servidor
+                    - possibilidade de enviar pelo socket:
+                        - bytes
+                        - strings
+                        - objetos (desde que serializável)
+                - UDP: montar para enviar, enviar, desmontar e receber
+                    - sem confirmação de entrega
+                    - adequado para arquiteturas ponto-a-ponto
+                    - possibilidades de enviar pelo socket:
+                        - bytes
+            - socket
+            - leitores e escritores
+            - threads
+    - Paradigma ou API
+        - Remote Procedure Call - RPC
+            - Teoria em que é possivel invocar métodos em outra(s) máquina(s), sem programar socket, leitor, descritor, etc
+            - Python é RPC
+            - Java é RMI
+                - RMI é uma API para RPC
+                    - Servidor
+                        - Interface de Serviço, como um menu em um restaurante
+                        - Classe que implementa a Interface, como o livro de receita de uma refeição
+                        - Classe Servidor, que fornece os serviços
+                    - Cliente
+                        - Interface de Serviço, como um menu em um restaurante
+                        - Classe Cliente, que invoca os serviços (passando ou não parâmetros)
