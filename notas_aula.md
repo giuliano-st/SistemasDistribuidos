@@ -396,3 +396,50 @@
                     - Cliente
                         - Interface de Serviço, como um menu em um restaurante
                         - Classe Cliente, que invoca os serviços (passando ou não parâmetros)
+
+## Aula 10
+ - Sistemas Distribuídos
+    - Modelo TCP/IP
+        - Endereço de IP
+        - Porta
+        - Protocolo de Transporte
+            - UDP
+            - TCP
+        - Socket
+            - Server Socket
+            - Socket
+            - Escritor
+            - Leitor
+            - Threads (Desbloquear a comunicação)
+        - RPC
+            - Abordagem
+            - Cliente-Servidor
+            - TCP
+                - RMI: API Java que roda RPC
+                    - Baseada em Interfaces (Conjunto de serviços) = "Menu"
+                    - Classes que implementam Interfaces
+                    - Lado do Servidor (Interfaces e Classes)
+                    - Lado do Cliente (Interfaces)
+                    - Regras de Firewall
+                        - Porta Padrão (1099)
+                        - TCP
+ - Multicast
+    - Grupo
+        - IPs de Classe D ("Nuvem")
+        - Porta de saída
+    - Arquitetura Ponto-a-Ponto
+        - Protocolo de Transporte UDP
+            - Métodos:
+                - MontarPacote
+                - EnviarPacote
+                - ReceberPacote
+                - Converte em bytes para enviar (buffer de bytes)
+    - Mensagem em grupo:
+        - Multicast
+        - Unicast = Precisa do IP de destino + 
+        - Histórico
+        - Evento (ex. Entrada e Saída de usuários)
+    - jGroups = multicast Java
+        - Terceirizado
+        - Grupo = Channel
+    - Todo vetor, objeto, container é um ponteiro
