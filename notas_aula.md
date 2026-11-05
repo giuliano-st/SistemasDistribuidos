@@ -443,3 +443,5 @@
         - Terceirizado
         - Grupo = Channel
     - Todo vetor, objeto, container é um ponteiro
+
+## Aula 11
